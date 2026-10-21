@@ -1,0 +1,122 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Appointments | Clinic Management System</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Clinic Appointment & Patient Management System</h1>
+  </header>
+
+  <nav class="main-navigation">
+    <a href="index.html">Dashboard</a>
+    <a href="appointments.html" class="active">Appointments</a>
+    <a href="doctors.html">Our Doctors</a>
+  </nav>
+
+  <main>
+
+    <section id="patient-section">
+      <h2>Register a Patient</h2>
+
+      <p>Enter the patient's details to register them with the clinic.</p>
+
+      <form id="patient-form">
+
+        <label for="patient-name">Patient Full Name</label>
+        <input
+          type="text"
+          id="patient-name"
+          name="patientName"
+          placeholder="Enter patient's full name"
+          required
+        >
+
+        <label for="patient-phone">Phone Number</label>
+        <input
+          type="tel"
+          id="patient-phone"
+          name="patientPhone"
+          placeholder="Enter patient's phone number"
+          required
+        >
+
+        <button type="submit">Register Patient</button>
+
+      </form>
+    </section>
+
+    <section id="appointment-section">
+      <h2>Book an Appointment</h2>
+
+      <img
+        src="Reception-section.jpg"
+        
+        alt="Healthcare professional providing patient care"
+        class="appointment-image"
+      >
+
+      <p>Choose a doctor and select a suitable date and time.</p>
+
+      <form id="appointment-form">
+
+        <label for="appointment-patient">Patient Name</label>
+        <input
+          type="text"
+          id="appointment-patient"
+          name="appointmentPatient"
+          placeholder="Enter patient's name"
+          required
+        >
+
+        <label for="appointment-doctor">Select Doctor</label>
+        <select
+          id="appointment-doctor"
+          name="appointmentDoctor"
+          required
+        >
+          <option value="">Choose a doctor</option>
+          <option value="dr-Ridhwan">Dr. Ridhwan- Clinical officer</option>
+          <option value="dr- Ahmed">Dr. Ahmed- Paeditrician</option>
+          <option value="dr-hassan">Dr. Hassan - Gynaecology</option>
+        </select>
+
+        <label for="appointment-date">Appointment Date</label>
+        <input
+          type="date"
+          id="appointment-date"
+          name="appointmentDate"
+          required
+        >
+
+        <label for="appointment-time">Appointment Time</label>
+        <input
+          type="time"
+          id="appointment-time"
+          name="appointmentTime"
+          required
+        >
+
+        <button type="submit">Book Appointment</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Clinic Appointment & Patient Management System</p>
+    <p>Helping you manage patient care and appointments.</p>
+  </footer>
+
+  <script type="module" src="src/main.js"></script>
+
+</body>
+</html>=

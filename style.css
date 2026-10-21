@@ -1,0 +1,436 @@
+/* =====================================
+
+1. GLOBAL STYLES
+    ===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #f3f7fc;
+color: #26374a;
+line-height: 1.6;
+}
+
+/* =====================================
+2. HEADER
+===================================== */
+
+header {
+background: linear-gradient(135deg, #103b66, #1769aa);
+color: white;
+padding: 28px 6%;
+text-align: center;
+box-shadow: 0 4px 15px rgba(16, 59, 102, 0.15);
+}
+
+header h1 {
+font-size: 30px;
+letter-spacing: 0.3px;
+line-height: 1.3;
+}
+
+/* =====================================
+3. MAIN CONTENT
+===================================== */
+
+main {
+width: 90%;
+max-width: 1200px;
+margin: 35px auto;
+}
+
+main > h2 {
+color: #103b66;
+font-size: 27px;
+margin-bottom: 8px;
+}
+
+main > p {
+color: #617287;
+margin-bottom: 25px;
+}
+
+/* =====================================
+4. WELCOME SECTION
+===================================== */
+
+#welcome-section {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 35px;
+background: linear-gradient(135deg, #e3f1ff, #ffffff);
+border: 1px solid #d7e8f8;
+border-radius: 18px;
+padding: 30px;
+margin-bottom: 30px;
+overflow: hidden;
+}
+
+.welcome-text {
+flex: 1;
+}
+
+.welcome-text h2 {
+color: #103b66;
+font-size: 30px;
+line-height: 1.3;
+margin-bottom: 14px;
+}
+
+.welcome-text p {
+color: #52677d;
+font-size: 16px;
+max-width: 500px;
+}
+
+.welcome-image {
+width: 43%;
+height: 260px;
+object-fit: cover;
+border-radius: 14px;
+}
+
+/* =====================================
+5. GENERAL SECTIONS
+===================================== */
+
+section {
+background-color: #ffffff;
+margin: 28px 0;
+padding: 28px;
+border: 1px solid #e0e9f2;
+border-radius: 16px;
+box-shadow: 0 5px 18px rgba(16, 59, 102, 0.06);
+}
+
+section h2 {
+color: #103b66;
+font-size: 24px;
+margin-bottom: 18px;
+padding-bottom: 12px;
+border-bottom: 2px solid #e5f1fc;
+}
+
+/* =====================================
+6. PATIENT AND APPOINTMENT FORMS
+===================================== */
+
+form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+label {
+display: block;
+margin-top: 8px;
+color: #26374a;
+font-size: 14px;
+font-weight: bold;
+}
+
+input,
+select,
+textarea {
+width: 100%;
+padding: 13px 14px;
+border: 1px solid #cbd8e6;
+border-radius: 8px;
+background-color: #fbfdff;
+color: #26374a;
+font-family: inherit;
+font-size: 15px;
+transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+color: #8a9aab;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+outline: none;
+border-color: #2878bd;
+box-shadow: 0 0 0 3px rgba(40, 120, 189, 0.12);
+}
+
+/* =====================================
+7. BUTTONS
+===================================== */
+
+button {
+display: inline-block;
+align-self: flex-start;
+margin-top: 14px;
+padding: 13px 22px;
+border: none;
+border-radius: 8px;
+background-color: #145b96;
+color: white;
+font-family: inherit;
+font-size: 15px;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+background-color: #0d416e;
+transform: translateY(-2px);
+}
+
+button:focus-visible {
+outline: 3px solid #8dc8fa;
+outline-offset: 3px;
+}
+
+/* =====================================
+8. APPOINTMENT IMAGE
+===================================== */
+
+.appointment-image {
+display: block;
+width: 100%;
+max-height: 300px;
+object-fit: cover;
+border-radius: 12px;
+margin: 0 0 22px;
+}
+
+/* =====================================
+9. DOCTORS SECTION
+===================================== */
+
+#doctors-list {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 22px;
+}
+
+.doctor-card {
+background-color: #f8fbff;
+border: 1px solid #dce9f6;
+border-radius: 14px;
+padding: 18px;
+text-align: center;
+overflow: hidden;
+transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.doctor-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px rgba(16, 59, 102, 0.12);
+}
+
+.doctor-image {
+display: block;
+width: 100%;
+height: 220px;
+object-fit: cover;
+object-position: center top;
+border-radius: 12px 12px 0 0;
+margin-bottom: 15px;
+background-color: #e7f0f9;
+}
+
+.doctor-card h3 {
+color: #103b66;
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.doctor-card p {
+color: #5b6e82;
+font-size: 14px;
+margin: 7px 0;
+}
+
+/* =====================================
+10. FOOTER
+===================================== */
+
+footer {
+background-color: #103b66;
+color: #ffffff;
+text-align: center;
+padding: 25px 15px;
+margin-top: 45px;
+}
+
+footer p {
+margin: 5px 0;
+font-size: 14px;
+color: #e1edf8;
+}
+
+/* =====================================
+11. RESPONSIVE DESIGN
+Tablets and smaller screens
+===================================== */
+
+@media (max-width: 900px) {
+#doctors-list {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#welcome-section {
+gap: 22px;
+}
+
+.welcome-image {
+width: 42%;
+height: 230px;
+}
+}
+
+/* =====================================
+12. MOBILE PHONE DESIGN
+===================================== */
+
+@media (max-width: 600px) {
+header {
+padding: 23px 5%;
+}
+
+header h1 {
+font-size: 22px;
+}
+
+main {
+width: 92%;
+margin: 22px auto;
+}
+
+main > h2 {
+font-size: 23px;
+}
+
+#welcome-section {
+flex-direction: column;
+align-items: stretch;
+padding: 20px;
+gap: 18px;
+}
+
+.welcome-text h2 {
+font-size: 25px;
+}
+
+.welcome-image {
+width: 100%;
+height: 210px;
+}
+
+section {
+padding: 20px;
+margin: 22px 0;
+}
+
+section h2 {
+font-size: 21px;
+}
+
+#doctors-list {
+grid-template-columns: 1fr;
+}
+
+.doctor-image {
+height: 260px;
+}
+
+button {
+width: 100%;
+align-self: stretch;
+}
+
+footer {
+padding: 22px 12px;
+}
+}
+
+/* MODERN NAVIGATION BAR */
+
+.main-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  padding: 18px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dce7f2;
+  box-shadow: 0 4px 12px rgba(16, 59, 102, 0.08);
+}
+
+.main-navigation a {
+  display: inline-block;
+  color: #24445f;
+  background-color: #f0f6fc;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 12px 22px;
+  border: 1px solid #dce7f2;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+.main-navigation a:hover {
+  background-color: #145b96;
+  color: #ffffff;
+  border-color: #145b96;
+  transform: translateY(-2px);
+}
+
+.main-navigation a.active {
+  background-color: #145b96;
+  color: #ffffff;
+  border-color: #145b96;
+}
+
+/* MOBILE NAVIGATION */
+
+@media (max-width: 600px) {
+  .main-navigation {
+    gap: 10px;
+    padding: 14px 10px;
+  }
+
+  .main-navigation a {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}
+/* Dashboard doctor images only */
+.doctor-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Separate doctors page: show the full portrait */
+.doctors-section .doctor-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #f5f7fa;
+    display: block;
+}
+
+    

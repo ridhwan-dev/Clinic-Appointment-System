@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Appointment and Patient Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Clinic Appointment and Patient Management System</h1>
+    </header>
+
+<nav class="main-navigation">
+  <a href="index.html" class="active">Dashboard</a>
+  <a href="appointments.html">Appointments</a>
+  <a href="doctors.html">Our Doctors</a>
+</nav>
+
+    <main>
+        <section id="welcome-section">
+            <div class="welcome-text">
+                <h2>Welcome to the Clinic Dashboard</h2>
+                <p>Manage Patient records and clinic appointments in one place.</p>
+                <img src="Reception-section.jpg" 
+                alt="Healthcare Professional in a clinic setting"
+                class="welcome-image"
+                
+                >
+
+            </div>
+
+
+        </section>
+        
+        
+        <section id="Patient-section">
+            <h2>Register a Patient</h2>
+            <form  id="patient-form">
+                <label for="patient-name">Patient Name:</label>
+                <input 
+                type="text"
+                 id="patient-name"
+                 name="PatientName"
+                 placeholder="Enter patient's full name"
+                 required
+>
+<label for="patient-phone">Phone Number:</label>
+<input 
+type="tel"
+id="patient-phone"
+name="patientPhone"
+placeholder="Enter Patient's phone number"
+required
+>
+<button type="submit">Register Patient</button>
+            </form>
+        </section>
+        <section id="appointment-section">
+            <h2>Book an Appointment</h2>
+            <form id="appointment-form">
+                <label for="appointment-patient">Patient Name:</label>
+                <input
+                 type="text"
+                 id="appointment-patient"
+                 name="appointmentPatient"
+                 placeholder="Enter Patient's name"
+                 required
+                 >
+                 <label for="appointment-doctor">Select Doctor</label>
+                 <select
+                  id="appointment-doctor"
+                  name="appointmentDoctor"
+                  required
+                 >
+
+                 <option value="">Choose a doctor</option>
+                 <option value="dr-Ridhwan">Dr. Ridhwan- Clinical officer</option>
+                 <option value="dr-Ahmed">Dr. Ahmed- Paeditrician</option>
+                 <option value="dr-hassan">Dr. Hassan - Gynaecologist</option>
+            
+                </select>
+
+                 <label for="appointment-date">Appointment Date:</label>
+                 <input 
+                 type="date"
+                 id="appointment-date"
+                 name="appointmentDate"
+                 required
+                 >
+                 <label for="appointment-time">Appointment Time:</label>
+                 <input
+                  type="time"
+                  id="appointment-time"
+                  name="appointmentTime"
+                  required
+                  >
+                  <button  type="submit">Book Appointment</button>
+            </form>
+        </section>
+        <section id="doctors-section">
+            <h2>Our Doctors</h2>
+            <p>View our doctors their specialties, and availability</p>
+            <div id="doctors-list">
+                <article class="doctor-card">
+                <img
+                 src="dr-Ahmed.jpg" 
+                 alt="Portrait representing Dr Ahmed"
+                 class="doctor-image"
+                 >
+                    <h3>Dr.Ahmed</h3>
+                    <p>Specialty: Paediatrics</p>
+                    <p>Available: Tuesday, Thursday, Saturday</p>
+                </article>
+            
+
+                <article class="doctor-card">
+                    <img 
+                    src="dr-Ridhwan.jpeg"
+                     alt="portrait representing Dr. Ridhwan"
+                     class="doctor-image"
+                     >
+                    <h3>Dr Ridhwan</h3>
+                    <p>Specialty: Clinical officer</p>
+                    <p>Available: Monday, Wednesday, Friday</p>
+                </article>
+
+                <article class="doctor-card">
+                <img
+                src="dr-Hassan.jpg"
+                alt="portrait representing Dr Hassan"
+                class="doctor-image"
+                >
+                    <h3>Dr Hassan</h3>
+                    <p>Specialty: Gynaecology</p>
+                    <p>Available: Monday, Tuesday, Thursday</p>
+                
+                </article>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Clinic Appointment & Patient Management System</p>
+        <p>Helping you manage patient care and appointments.</p>
+    </footer>
+
+    <script  type="module" src="src/main.js"> </script>
+
+</body>
+</html>
