@@ -15,3 +15,38 @@ export async function createAppointment(appointment){
     return await response.json();
 
 }
+export async function getAppointments() {
+    const response = await fetch(API_URL);
+
+    if (!response.ok) {
+        throw new Error("Failed to fetch appointments");
+
+    }
+    return await response.json();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
