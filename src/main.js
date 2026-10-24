@@ -76,9 +76,16 @@ async function displayAppointments() {
                   appointmentDate.textContent =
                   `Date: ${appointment.appointmentDate || appointment.date || "Not provided"}`;
 
+const appointmentDoctor = document.createElement("p");
 
+appointmentDoctor.textContent =
+  `Doctor: ${appointment.appointmentDoctor || "Not assigned"}`;
 
+                  appointmentCard.append(patientName, appointmentDate);
+                  appointmentsList.appendChild(appointmentCard)
+            
             });
+
             
             
       }catch (error) {
