@@ -25,6 +25,21 @@ export async function getAppointments() {
     return await response.json();
 }
 
+export async function updateAppointment(id, appointment) {
+  const response = await fetch(`${API_URL}/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(appointment),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to update appointment");
+  }
+
+  return await response.json();
+}
 
 
 
