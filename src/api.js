@@ -4,7 +4,7 @@ export async function createAppointment(appointment){
     const response = await fetch (API_URL, {
         method: "POST",
         headers: {
-            "content-Type": "application/json"
+            "Content-Type": "application/json"
         },
         body: JSON.stringify(appointment)
     });
