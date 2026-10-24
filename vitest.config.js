@@ -4,7 +4,7 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     coverage: {
-      include: ["api.js", "main.js"],
+      include: ["src/api.js", "src/main.js"],
     },
   },
 });
