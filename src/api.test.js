@@ -25,7 +25,8 @@ describe("Clinic appointment API", () => {
 
     await expect(getAppointments()).resolves.toEqual(appointments);
     expect(fetch).toHaveBeenCalledWith(
-      "http://localhost:3000/appointments"
+      "https://clinic-appointment-system-gj83.onrender.com/appointments",
+                 
     );
   });
 
@@ -56,7 +57,8 @@ describe("Clinic appointment API", () => {
     });
 
     expect(fetch).toHaveBeenCalledWith(
-      "http://localhost:3000/appointments",
+      "https://clinic-appointment-system-gj83.onrender.com/appointments",
+      
       expect.objectContaining({
         method: "POST",
         body: JSON.stringify(appointment),
@@ -81,7 +83,10 @@ describe("Clinic appointment API", () => {
     });
 
     expect(fetch).toHaveBeenCalledWith(
-      "http://localhost:3000/appointments/1",
+      "https://clinic-appointment-system-gj83.onrender.com/appointments/1",
+
+
+
       expect.objectContaining({
         method: "PUT",
         body: JSON.stringify(appointment),
@@ -106,7 +111,10 @@ describe("Clinic appointment API", () => {
     });
 
     expect(fetch).toHaveBeenCalledWith(
-      "http://localhost:3000/appointments/1",
+
+      "https://clinic-appointment-system-gj83.onrender.com/appointments/1",
+                                                       
+                          
       expect.objectContaining({
         method: "PATCH",
         body: JSON.stringify(updates),
@@ -123,7 +131,13 @@ describe("Clinic appointment API", () => {
     await expect(deleteAppointment(1)).resolves.toBe(true);
 
     expect(fetch).toHaveBeenCalledWith(
-      "http://localhost:3000/appointments/1",
+
+
+      "https://clinic-appointment-system-gj83.onrender.com/appointments/1",
+
+
+
+
       { method: "DELETE" }
     );
   });

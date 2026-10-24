@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/appointments";
+const API_URL = "https://clinic-appointment-system-gj83.onrender.com/appointments";
 
 export async function createAppointment(appointment){
     const response = await fetch (API_URL, {
