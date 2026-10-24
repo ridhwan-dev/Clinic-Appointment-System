@@ -1,4 +1,4 @@
-import { createAppointment , getAppointments, updateAppointment} from "./api.js";
+import { createAppointment , getAppointments, updateAppointment, patchAppointment} from "./api.js";
 
 
 const appointmentDate = document.getElementById("appointment-date")
@@ -102,12 +102,16 @@ appointmentDoctor.textContent =
 
 displayAppointments();
 
-updateAppointment(4, {
-  appointmentPatient: "Rayan Ahmed",
-  appointmentDoctor: "dr-Ridhwan",
-  appointmentDate: "2026-10-28",
-  appointmentTime: "17:30",
-})
+
+
+
+
+
+      
+
+
+
+
 
 
 

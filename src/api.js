@@ -40,7 +40,21 @@ export async function updateAppointment(id, appointment) {
 
   return await response.json();
 }
+export async function patchAppointment(id, updates) {
+  const response = await fetch(`${API_URL}/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updates),
+  });
 
+  if (!response.ok) {
+    throw new Error("Failed to update appointment");
+  }
+
+  return await response.json();
+}
 
 
 
