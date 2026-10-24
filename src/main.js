@@ -1,4 +1,4 @@
-import { createAppointment , getAppointments, updateAppointment, patchAppointment} from "./api.js";
+import { createAppointment , getAppointments, updateAppointment, patchAppointment, deleteAppointment} from "./api.js";
 
 
 const appointmentDate = document.getElementById("appointment-date")
@@ -79,9 +79,43 @@ async function displayAppointments() {
 const appointmentDoctor = document.createElement("p");
 
 appointmentDoctor.textContent =
-  `Doctor: ${appointment.appointmentDoctor || "Not assigned"}`;
+  `Doctor: ${appointment.appointmentDoctor || "Not assigned"}`;const deleteButton = document.createElement("button");
 
-                  appointmentCard.append(patientName, appointmentDate);
+deleteButton.textContent = "Delete Appointment";
+
+deleteButton.addEventListener("click", async () => {
+  const confirmed = confirm("Are you sure you want to delete this appointment?");
+
+  if (!confirmed) {
+    return;
+  }
+
+  try {
+    await deleteAppointment(appointment.id);
+    await displayAppointments();
+  } catch (error) {
+    console.error("Error deleting appointment:", error);
+    alert("Unable to delete appointment. Please try again.");
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+                  appointmentCard.append(
+                   patientName,
+                   appointmentDate,
+                   appointmentDoctor,
+                   deleteButton
+                  );
+                  
                   appointmentsList.appendChild(appointmentCard)
             
             });

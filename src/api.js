@@ -56,7 +56,17 @@ export async function patchAppointment(id, updates) {
   return await response.json();
 }
 
+export async function deleteAppointment(id) {
+  const response = await fetch(`${API_URL}/${id}`, {
+    method: "DELETE",
+  });
 
+  if (!response.ok) {
+    throw new Error("Failed to delete appointment");
+  }
+
+  return true;
+}
 
 
 
