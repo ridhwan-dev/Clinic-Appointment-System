@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1792863088343" clover="3.2.0">
-  <project timestamp="1792863088344" name="All files">
+<coverage generated="1792875972212" clover="3.2.0">
+  <project timestamp="1792875972213" name="All files">
     <metrics statements="206" coveredstatements="154" conditionals="27" coveredconditionals="17" methods="6" coveredmethods="6" elements="239" coveredelements="177" complexity="0" loc="206" ncloc="206" packages="1" files="2" classes="2"/>
     <file name="api.js" path="/home/user/clinic-appointment-system/src/api.js">
       <metrics statements="69" coveredstatements="61" conditionals="12" coveredconditionals="8" methods="5" coveredmethods="5"/>
